@@ -1,1 +1,1 @@
-# django_mobiles
+# mobileshop
