@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- Bootstrap -->
+     {% load static %}
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="container text-center mt-5" 
+       style="padding:10px 20px;background-color:rgb(21, 150, 230)">
+        <h3 class="container mt-2" style="color:aliceblue;text-decoration:underline">
+          BEST SELLERS  </h3>
+          <strong><p style="font-size:15px;">Enjoy your shopping and get benefitted!</p></strong>
+      </div>
+<!--card-->
+<div class="container">
+    <h2>SEARCHED RESULTS</h2>
+</div>
+<div class="container " style="padding:50px 70px;display:flex;flex-wrap:wrap;
+justify-content:flex-start;gap:10px;">
+{% if obj %}
+{% for i in obj %}
+<div class="d-flex ms-0 ">
+<div class="card ms-5 " style="width:230px;border:2px solid rgb(21, 150, 230);
+    position:relative;
+    top:20px;">
+    <img class="card-img-top mx-auto d-block mt-2" src="{{i.image.url}}" alt="Card image" style="width:80px;">
+    <div class="card-body">
+      <b  style="font-size:17px"class="card-title">{{i.name}}</b>
+      <p style="font-size:17px;color:red" class="card-text"><b><s>Rs{{i.original_price | stringformat:'d'}}</s></b> </p>
+      <p style="font-size:17px;position:relative;
+      bottom:10px;color:green" class="card-text"><b>Rs{{i.selling_price | stringformat:'d'}} </b></p>
+      <a href="#" class="btn btn-primary text-center" style="margin-left:45px;">Buy now</a>
+    </div>
+    </div>
+  </div>
+  {% endfor %}
+  {% elif obj1 %}
+  {% for i in obj1 %}
+<div class="d-flex ms-0 ">
+<div class="card ms-5 " style="width:230px;border:2px solid rgb(21, 150, 230);
+    position:relative;
+    top:20px;">
+    <img class="card-img-top mx-auto d-block mt-2" src="{{i.image.url}}" alt="Card image" style="width:80px;">
+    <div class="card-body">
+      <b  style="font-size:17px"class="card-title">{{i.name}}</b>
+      <p style="font-size:17px;color:red" class="card-text"><b><s>Rs{{i.original_price | stringformat:'d'}}</s></b> </p>
+      <p style="font-size:17px;position:relative;
+      bottom:10px;color:green" class="card-text"><b>Rs{{i.selling_price | stringformat:'d'}} </b></p>
+      <a href="#" class="btn btn-primary text-center" style="margin-left:45px;">Buy now</a>
+    </div>
+    </div>
+  </div>
+  {% endfor %}
+  {% elif obj2 %}
+  {% for i in obj2 %}
+<div class="d-flex ms-0 ">
+<div class="card ms-5 " style="width:230px;border:2px solid rgb(21, 150, 230);
+    position:relative;
+    top:20px;">
+    <img class="card-img-top mx-auto d-block mt-2" src="{{i.image.url}}" alt="Card image" style="width:80px;">
+    <div class="card-body">
+      <b  style="font-size:17px"class="card-title">{{i.name}}</b>
+      <p style="font-size:17px;color:red" class="card-text"><b><s>Rs{{i.original_price | stringformat:'d'}}</s></b> </p>
+      <p style="font-size:17px;position:relative;
+      bottom:10px;color:green" class="card-text"><b>Rs{{i.selling_price | stringformat:'d'}} </b></p>
+      <a href="#" class="btn btn-primary text-center" style="margin-left:45px;">Buy now</a>
+    </div>
+    </div>
+  </div>
+  {% endfor %}
+  {% elif obj3 %}
+  {% for i in obj3 %}
+<div class="d-flex ms-0 ">
+<div class="card ms-5 " style="width:230px;border:2px solid rgb(21, 150, 230);
+    position:relative;
+    top:20px;">
+    <img class="card-img-top mx-auto d-block mt-2" src="{{i.image.url}}" alt="Card image" style="width:80px;">
+    <div class="card-body">
+      <b  style="font-size:17px"class="card-title">{{i.name}}</b>
+      <p style="font-size:17px;color:red" class="card-text"><b><s>Rs{{i.original_price | stringformat:'d'}}</s></b> </p>
+      <p style="font-size:17px;position:relative;
+      bottom:10px;color:green" class="card-text"><b>Rs{{i.selling_price | stringformat:'d'}} </b></p>
+      <a href="#" class="btn btn-primary text-center" style="margin-left:45px;">Buy now</a>
+    </div>
+    </div>
+  </div>
+  {% endfor %}
+  {% elif obj4 %}
+  {% for i in obj4 %}
+<div class="d-flex ms-0 ">
+<div class="card ms-5 " style="width:230px;border:2px solid rgb(21, 150, 230);
+    position:relative;
+    top:20px;">
+    <img class="card-img-top mx-auto d-block mt-2" src="{{i.image.url}}" alt="Card image" style="width:80px;">
+    <div class="card-body">
+      <b  style="font-size:17px"class="card-title">{{i.name}}</b>
+      <p style="font-size:17px;color:red" class="card-text"><b><s>Rs{{i.original_price | stringformat:'d'}}</s></b> </p>
+      <p style="font-size:17px;position:relative;
+      bottom:10px;color:green" class="card-text"><b>Rs{{i.selling_price | stringformat:'d'}} </b></p>
+      <a href="#" class="btn btn-primary text-center" style="margin-left:45px;">Buy now</a>
+    </div>
+    </div>
+  </div>
+  {% endfor %}
+  {% endif %}
+  </div>
+  <!-- 2 loop-->
+  
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+

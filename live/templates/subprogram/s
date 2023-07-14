@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    
+  </head>
+  <body>
+    <div class="d-flex justify-content-center mt-5">
+    <form action="" class=" form-control form-control-lg mt-5" method="POST"style="max-width:400px;border:2px solid black" >
+      {% csrf_token %}
+      <div class="form-group ">
+        <label>Username</label><br>
+        <input type="text" style="border:1px solid black" class="form-control"name="username" placeholder= "Enter your username"id="email">
+      </div><br>  
+      <div class="form-group ">
+          <label>Email address</label><br>
+          <input type="email" name="email" style="border:1px solid black" class="form-control" placeholder= "Enter your email"id="email">
+        </div><br>
+        <div class="form-group">
+          <label>Password</label><br>
+          <input type="password" name="password" style="border:1px solid black" placeholder= "Enter your password"class="form-control" id="pwd">
+        </div>
+        <p style="font-size:10px"><b>please make sure the username and email already exist</b></p>
+
+        
+        <button type="submit"class="btn btn-default btn-success btn mb-2" style="width:100px">sign up</button>
+        
+      </form>
+    </div>
+    <div class="text-center">
+      
+      <button type="submit" class="btn btn-default btn-primary mt-4"style="width:100px"> 
+       <a href="{% url 'logindup' %}" style="text-decoration:none;color:aliceblue;">Log In</a></button>
+    </div>
+   
+     
+    
+   
+  </body>
+</html>
