@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'mobile',
         'HOST':'localhost',
         'USER':'root',
-        'PASSWORD':'sai06',
+        'PASSWORD':'enter your password',
         'PORT':'3306',
         'HOST':'127.0.0.111',
     }
@@ -134,8 +134,8 @@ MEDIA_ROOT=BASE_DIR/'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'aakofficial007@gmail.com'
-EMAIL_HOST_PASSWORD ='qrksrmkyyswhoapa'
+EMAIL_HOST_USER = 'your gmail id'
+EMAIL_HOST_PASSWORD ='password'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
